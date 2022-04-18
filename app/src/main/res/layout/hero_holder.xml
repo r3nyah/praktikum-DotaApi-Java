@@ -1,41 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:padding="5dp">
 
-    <ImageView
-        android:layout_width="128dp"
-        android:layout_height="72dp"
-        android:id="@+id/tv_img"
-        android:padding="8dp" />
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:orientation="vertical" >
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="7.5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="7.5dp"
+        app:cardBackgroundColor="#222326"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/tv_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#7A64FF"
+            app:civ_border_width="4dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/tv_name"
-            android:text="Name" />
-        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_attr"
-                android:paddingRight="8dp"
-                android:text="Attribute" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_attk"
-                android:text="Attack" />
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toEndOf="@id/tv_img"
+            android:text="Name"
+            android:textColor="#DCE1FA"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/tv_attr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="75dp"
+            android:layout_toEndOf="@id/tv_img"
+            android:text="Attribute"
+            android:textColor="#DCE1FA"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_attk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@id/tv_img"
+            android:text="Attack"
+            android:textColor="#DCE1FA"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

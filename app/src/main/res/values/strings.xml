@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DotaApi</string>
+    <string name="desc">Dota 2 is a MOBA game in which two team of five players compete to collectively destroy a large structure defend by the opposite team known as the Ancient.</string>
 </resources>
